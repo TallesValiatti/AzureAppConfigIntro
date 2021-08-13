@@ -1,0 +1,8 @@
+# Get the AppConfig connection string 
+appConfigConnectionString=$(az appconfig credential list \
+--resource-group $myResourceGroupName \
+--name $myAppConfigStoreName \
+--query "[?name=='Secondary Read Only'] .connectionString" -o tsv)
+
+# Echo the connection string for use in your application
+echo "$appConfigConnectionString"

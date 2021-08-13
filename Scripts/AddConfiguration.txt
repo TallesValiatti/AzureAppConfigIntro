@@ -1,0 +1,2 @@
+# Add configuration
+az appconfig kv set -n myAppConfigStoreName --key color --label MyLabel --value red
